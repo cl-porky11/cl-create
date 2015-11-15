@@ -2,4 +2,4 @@
   :depends-on (#:closer-mop)
   :description "User-friendly system for making instances"
   :license "LLGPL"
-  :components ((:file "create.lisp")))
+  :components ((:file "create")))

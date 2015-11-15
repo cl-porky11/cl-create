@@ -28,7 +28,7 @@
 (labels ((expand-lists (object lists)
            (when lists
              (destructuring-bind ((keyword . body) . lists) lists
-               `(,keyword ,(create-keyword-expandesbject keyword body) ,@(expand-lists object lists))))))
+               `(,keyword ,(create-keyword-expand object keyword body) ,@(expand-lists object lists))))))
   (defmacro create (name &rest rest &aux (object (let ((class (find-class name)))
                                                             (finalize-inheritance class)
                                                             (class-prototype class))))
